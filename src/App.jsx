@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import Carts from "./Components/Carts";
 import {getValueFormLocalStorage,saveValueToLocalStorage} from './Local_Database/database'
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+      <Outlet /> 
       <div className="nav">
         <ul>
           <li>LOGO</li>
